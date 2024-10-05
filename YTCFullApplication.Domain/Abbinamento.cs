@@ -1,6 +1,8 @@
-﻿namespace YTCFullApplication.Domain
+﻿using YTCFullApplication.Shared;
+
+namespace YTCFullApplication.Domain
 {
-    public class Abbinamento
+    public class Abbinamento : Entity<Guid>
     {
         public Guid Classe_Id { get; set; }
         public virtual Classe? Classe { get; set; }
