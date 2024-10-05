@@ -6,7 +6,8 @@ namespace YTCFullApplication.Host.Controllers
     public class StudentiController : ControllerBase
     {
         [HttpGet]
-        public IActionResult GetAll(int id)
+        [ProducesResponseType(typeof(IEnumerable<Studente>), StatusCodes.Status200OK)]
+        public IActionResult GetAll()
         { return Ok();  }
         
         [HttpGet("{id}")]
