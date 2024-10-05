@@ -11,12 +11,24 @@ namespace YTCFullApplication.Host.Controllers
         { return Ok();  }
         
         [HttpGet("{id}")]
+        [ProducesResponseType(typeof(Studente), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult Get(int id)
-        { return Ok();  }
+        {
+            ModelState.AddModelError("Id", "Id non trovato");
+            return NotFound(new ValidationProblemDetails(ModelState)); 
+            //throw new Exception("Errorer imprevisto");
+        }
         
         [HttpPost]
+        [ProducesResponseType(typeof(Studente), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult Post(Studente studente)
-        { return Ok();  }
+        {
+            ModelState.AddModelError("Nome", "Nome troppo lungo");
+            return BadRequest(new ValidationProblemDetails(ModelState));
+            //return Ok();
+        }
 
         [HttpPut]
         public IActionResult Put(Studente studente)
