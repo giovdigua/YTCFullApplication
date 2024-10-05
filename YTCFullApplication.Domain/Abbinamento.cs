@@ -1,0 +1,14 @@
+﻿namespace YTCFullApplication.Domain
+{
+    public class Abbinamento
+    {
+        public Guid Classe_Id { get; set; }
+        public virtual Classe? Classe { get; set; }
+
+        public Guid Docente_Id { get; set; }
+        public virtual Docente? Docente { get; set; }
+
+        public Guid Materia_Id { get; set; }
+        public virtual Materia? Materia { get; set; }
+    }
+}

@@ -1,13 +1,7 @@
-﻿using YTCFullApplication.Shared;
-
-namespace YTCFullApplication.Domain
+﻿namespace YTCFullApplication.Domain
 {
-    public class Studente : Entity<int>
+    public class Studente : Persona
     {
-
-        public string Nome { get; set; } = string.Empty;
-        public string Cognome { get; set; } = string.Empty;
-        public DateOnly DataNascita { get; set; }
-
+        public virtual ICollection<Frequenza>? Frequenze { get; set; }
     }
 }
