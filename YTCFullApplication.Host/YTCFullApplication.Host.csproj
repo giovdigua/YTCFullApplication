@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\YTCFullApplication.Domain\YTCFullApplication.Domain.csproj" />
+    <ProjectReference Include="..\YTCFullApplication.Json\YTCFullApplication.Json.csproj" />
   </ItemGroup>
 
 </Project>

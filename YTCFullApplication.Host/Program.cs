@@ -1,3 +1,4 @@
+using YTCFullApplication.Json;
 
 namespace YTCFullApplication.Host
 {
@@ -9,7 +10,22 @@ namespace YTCFullApplication.Host
 
             // Add services to the container.
 
-            builder.Services.AddControllers();
+
+
+            var jsonOptions = builder.Services.AddJsonOptions();
+            builder.Services.AddControllers().AddJsonOptions(config =>
+            {
+                config.JsonSerializerOptions.PropertyNameCaseInsensitive = jsonOptions.PropertyNameCaseInsensitive;
+                config.JsonSerializerOptions.DefaultIgnoreCondition = jsonOptions.DefaultIgnoreCondition;
+                config.JsonSerializerOptions.PropertyNamingPolicy = jsonOptions.PropertyNamingPolicy;
+
+                config.JsonSerializerOptions.Converters.Clear();
+
+                foreach (var converter in jsonOptions.Converters)
+                {
+                    config.JsonSerializerOptions.Converters.Add(converter);
+                }
+            });
             builder.Services.AddProblemDetails();
 
             builder.Services.AddSwaggerGen();

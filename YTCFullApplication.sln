@@ -5,11 +5,15 @@ VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{A9410418-D6D5-42C9-864F-C6C624E9BE34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTCFullApplication.Host", "YTCFullApplication.Host\YTCFullApplication.Host.csproj", "{6D6F6B8F-DD0C-4B45-BFAC-4F557A4FFB7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTCFullApplication.Host", "YTCFullApplication.Host\YTCFullApplication.Host.csproj", "{6D6F6B8F-DD0C-4B45-BFAC-4F557A4FFB7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTCFullApplication.Domain", "YTCFullApplication.Domain\YTCFullApplication.Domain.csproj", "{95305631-7405-41FD-8402-4B7833653E5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTCFullApplication.Domain", "YTCFullApplication.Domain\YTCFullApplication.Domain.csproj", "{95305631-7405-41FD-8402-4B7833653E5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTCFullApplication.Shared", "YTCFullApplication.Shared\YTCFullApplication.Shared.csproj", "{F2534471-1C69-4068-B63C-F33DF2362FE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTCFullApplication.Shared", "YTCFullApplication.Shared\YTCFullApplication.Shared.csproj", "{F2534471-1C69-4068-B63C-F33DF2362FE0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{61464E1C-08C9-48F9-A781-3105E443DF43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTCFullApplication.Json", "YTCFullApplication.Json\YTCFullApplication.Json.csproj", "{2B5D1993-DDF3-4FCC-AB4B-E56587E1E8E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +33,10 @@ Global
 		{F2534471-1C69-4068-B63C-F33DF2362FE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2534471-1C69-4068-B63C-F33DF2362FE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2534471-1C69-4068-B63C-F33DF2362FE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B5D1993-DDF3-4FCC-AB4B-E56587E1E8E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B5D1993-DDF3-4FCC-AB4B-E56587E1E8E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B5D1993-DDF3-4FCC-AB4B-E56587E1E8E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B5D1993-DDF3-4FCC-AB4B-E56587E1E8E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,6 +44,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{6D6F6B8F-DD0C-4B45-BFAC-4F557A4FFB7E} = {A9410418-D6D5-42C9-864F-C6C624E9BE34}
 		{95305631-7405-41FD-8402-4B7833653E5D} = {A9410418-D6D5-42C9-864F-C6C624E9BE34}
+		{F2534471-1C69-4068-B63C-F33DF2362FE0} = {61464E1C-08C9-48F9-A781-3105E443DF43}
+		{2B5D1993-DDF3-4FCC-AB4B-E56587E1E8E3} = {61464E1C-08C9-48F9-A781-3105E443DF43}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {52A07D4B-E22E-4F06-9176-77C6D6C6EDAA}
